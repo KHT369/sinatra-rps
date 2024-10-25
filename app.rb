@@ -8,8 +8,17 @@ BetterErrors.application_root = __dir__
 BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
 get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+  erb(:home)
+end
+
+get("/rock") do
+  erb(:rock)
+end
+
+get("/paper") do
+  erb(:paper)
+end
+
+get("/scissors") do
+  erb(:scissors)
 end
