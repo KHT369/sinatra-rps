@@ -56,13 +56,16 @@ get("/scissors") do
   def roll(ai_choice)
     if ai_choice == "scissors"
       pp "We tied!"
-    elsif ai_choice == "rock"
-      pp "We lost!"
-    else
+    elsif ai_choice == "paper"
       pp "We won!"
+    else
+      pp "We lost!"
     end
   end
+  
+  ai_choice = random
 
-  @o
+  @outcome = "We played scissors!\nThey played #{ai_choice}!\n #{roll(ai_choice)}"
+
   erb(:scissors)
 end
